@@ -31,7 +31,6 @@
         #pg1 {
             width: 1000px;
             height: 600px;
-            z-index: 2;
             border-radius: 10%;
             border: 2px solid black;
             opacity: 0;
@@ -46,7 +45,6 @@
         #pg2 {
             width: 1000px;
             height: 600px;
-            z-index: 2;
             border-radius: 10%;
             border: 2px solid black;
             opacity: 0;
@@ -61,7 +59,6 @@
         #pg3 {
             width: 1000px;
             height: 600px;
-            z-index: 2;
             border-radius: 10%;
             border: 2px solid black;
             opacity: 0;
@@ -125,9 +122,13 @@
     <script>
 
         let idStr = "";
+        let backGround = document.querySelector("body");
 
         function showPg (idStr) {
-            document.getElementById(idStr).style.opacity = ('1');
+            if(document.getElementById("pg1").style.opacity == 1 || document.getElementById("pg2").style.opacity == 1 || document.getElementById("pg3").style.opacity == 1){
+                document.getElementById(idStr).style.opacity = ('1');
+                backGround.style.filter = "blur(3px)";
+            }
         }
 
         function closePg (idStr) {
