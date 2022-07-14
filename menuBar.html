@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .menuBar {
+            display: fixed;
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            z-index: 1;
+        } 
+
+        .menuBar button {
+            margin: 25px;
+            height: 100%;
+            width: 15%;
+            background-color: white;
+            color: grey;
+            text-align: center;
+            display: flex;
+            float: left;
+            border: 2px solid yellowgreen;
+            border-radius: 10%;
+        }
+
+        #pg1 {
+            width: 1000px;
+            height: 600px;
+            z-index: 2;
+            border-radius: 10%;
+            border: 2px solid black;
+            opacity: 0;
+            transition-timing-function: ease-out;
+            transition-duration: 0.5s;
+            margin-top: 70px;
+            background-color: black;
+            color: white;
+            position: absolute;
+        }
+
+        #pg2 {
+            width: 1000px;
+            height: 600px;
+            z-index: 2;
+            border-radius: 10%;
+            border: 2px solid black;
+            opacity: 0;
+            transition-timing-function: ease-out;
+            transition-duration: 0.5s;
+            margin-top: 70px;
+            background-color: black;
+            color: white;
+            position: absolute;
+        }
+
+        #pg3 {
+            width: 1000px;
+            height: 600px;
+            z-index: 2;
+            border-radius: 10%;
+            border: 2px solid black;
+            opacity: 0;
+            transition-timing-function: ease-out;
+            transition-duration: 0.5s;
+            margin-top: 70px;
+            background-color: black;
+            color: white;
+            position: absolute;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .container div button {
+            background-color: black;
+            color: white;
+            border: 3px solid gray;
+            border-radius: 5%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="menuBar">
+        <button id="div1" onclick="showPg ('pg1')">
+            일
+        </button>
+        <button id="div2" onclick="showPg ('pg2')">
+            이
+        </button>
+        <button id="div3" onclick="showPg ('pg3')">
+            삼
+        </button>
+    </div>
+    <div class="container">
+
+    <div id="pg1">
+        <button id="cancel1" onclick="closePg ('pg1')">
+            <h4 style="display: flex; float: right;">X</h4>
+        </button>
+        <h1>fjkekfllsefkself<br>efsfe<br>efsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
+    </div>
+
+    <div id="pg2">
+        <button id="cancel2" onclick="closePg ('pg2')">
+            <h4 style="display: flex; float: right;">X</h4>
+        </button>
+        <h1>fjkekfllsefkself<br>efsfe<br>efsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
+    </div>
+
+    <div id="pg3">
+        <button id="cancel3" onclick="closePg ('pg3')">
+            <h4 style="display: flex; float: right;">X</h4>
+        </button>
+        <h1>fjkekfllsefkself<br>efsfe<br>efsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
+    </div>
+    </div>
+
+    <script>
+
+        let idStr = "";
+
+        function showPg (idStr) {
+            document.getElementById(idStr).style.opacity = ('1');
+        }
+
+        function closePg (idStr) {
+            document.getElementById(idStr).style.opacity = ('0');
+        }
+    </script>
+
+</body>
+</html>
