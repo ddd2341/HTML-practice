@@ -29,45 +29,51 @@
         }
 
         #pg1 {
-            width: 1000px;
+            visibility: hidden;
+            /* width: 1000px;
             height: 600px;
             border-radius: 10%;
             border: 2px solid black;
-            opacity: 0;
+            display: flex;
             transition-timing-function: ease-out;
             transition-duration: 0.5s;
             margin-top: 70px;
             background-color: black;
             color: white;
             position: absolute;
+            visibility: hidden; */
         }
 
         #pg2 {
-            width: 1000px;
+            visibility: hidden;
+            /* width: 1000px;
             height: 600px;
             border-radius: 10%;
             border: 2px solid black;
-            opacity: 0;
+            display: flex;
             transition-timing-function: ease-out;
             transition-duration: 0.5s;
             margin-top: 70px;
             background-color: black;
             color: white;
             position: absolute;
+            visibility: hidden; */
         }
 
         #pg3 {
-            width: 1000px;
+            visibility: hidden;
+            /* width: 1000px;
             height: 600px;
             border-radius: 10%;
             border: 2px solid black;
-            opacity: 0;
+            display: flex;
+            transition: all 0.3s;
             transition-timing-function: ease-out;
-            transition-duration: 0.5s;
             margin-top: 70px;
             background-color: black;
             color: white;
             position: absolute;
+            visibility: hidden; */
         }
 
         .container {
@@ -79,6 +85,22 @@
             color: white;
             border: 3px solid gray;
             border-radius: 5%;
+        }
+
+        .act {
+            width: 1000px;
+            height: 600px;
+            border-radius: 10%;
+            border: 2px solid black;
+            display: flex;
+            transition: all 0.3s;
+            transition-timing-function: ease-out;
+            margin-top: 70px;
+            background-color: black;
+            color: white;
+            position: absolute;
+            visibility: visible;
+            transition: all 0.3s;
         }
     </style>
 
@@ -98,22 +120,22 @@
     <div class="container">
 
     <div id="pg1">
-        <button id="cancel1" onclick="closePg ('pg1')">
-            <h4 style="display: flex; float: right;">X</h4>
+        <button id="cancel1" onclick="closePg ('pg1')" style="display: flex; float: right;">
+            <h4>X</h4>
         </button>
         <h1>fjkekfllsefkself<br>efsfe<br>efsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
     </div>
 
     <div id="pg2">
-        <button id="cancel2" onclick="closePg ('pg2')">
-            <h4 style="display: flex; float: right;">X</h4>
+        <button id="cancel2" onclick="closePg ('pg2')" style="display: flex; float: right;">
+            <h4>X</h4>
         </button>
         <h1>fjkekfllsefkself<br>efsfe<br>efsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
     </div>
 
     <div id="pg3">
-        <button id="cancel3" onclick="closePg ('pg3')">
-            <h4 style="display: flex; float: right;">X</h4>
+        <button id="cancel3" onclick="closePg ('pg3')" style="display: flex; float: right;">
+            <h4>X</h4>
         </button>
         <h1>fjkekfllsefkself<br>efsfe<br>efsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
     </div>
@@ -125,14 +147,11 @@
         let backGround = document.querySelector("body");
 
         function showPg (idStr) {
-            if(document.getElementById("pg1").style.opacity == 1 || document.getElementById("pg2").style.opacity == 1 || document.getElementById("pg3").style.opacity == 1){
-                document.getElementById(idStr).style.opacity = ('1');
-                backGround.style.filter = "blur(3px)";
-            }
+            document.getElementById("div1").classList.toggle('act');
         }
 
         function closePg (idStr) {
-            document.getElementById(idStr).style.opacity = ('0');
+            document.getElementById(idStr).classList.toggle('act');
         }
     </script>
 
