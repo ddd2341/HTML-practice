@@ -30,50 +30,49 @@
 
         #pg1 {
             visibility: hidden;
-            /* width: 1000px;
+            width: 1000px;
             height: 600px;
             border-radius: 10%;
             border: 2px solid black;
             display: flex;
+            float: left;
             transition-timing-function: ease-out;
             transition-duration: 0.5s;
             margin-top: 70px;
             background-color: black;
             color: white;
             position: absolute;
-            visibility: hidden; */
         }
 
         #pg2 {
             visibility: hidden;
-            /* width: 1000px;
+            width: 1000px;
             height: 600px;
             border-radius: 10%;
             border: 2px solid black;
             display: flex;
+            float: left;
             transition-timing-function: ease-out;
             transition-duration: 0.5s;
             margin-top: 70px;
             background-color: black;
             color: white;
             position: absolute;
-            visibility: hidden; */
         }
 
         #pg3 {
-            visibility: hidden;
-            /* width: 1000px;
+            width: 1000px;
             height: 600px;
             border-radius: 10%;
             border: 2px solid black;
-            display: flex;
+            display: none;
+            float: left;
             transition: all 0.3s;
             transition-timing-function: ease-out;
             margin-top: 70px;
             background-color: black;
             color: white;
             position: absolute;
-            visibility: hidden; */
         }
 
         .container {
@@ -88,19 +87,17 @@
         }
 
         .act {
-            width: 1000px;
-            height: 600px;
-            border-radius: 10%;
-            border: 2px solid black;
             display: flex;
-            transition: all 0.3s;
-            transition-timing-function: ease-out;
-            margin-top: 70px;
+        }
+
+        button:hover {
             background-color: black;
-            color: white;
-            position: absolute;
-            visibility: visible;
-            transition: all 0.3s;
+            border-color: red;
+        }
+
+        button:active {
+            background-color: white;
+            border-color: green;
         }
     </style>
 
@@ -147,7 +144,7 @@
         let backGround = document.querySelector("body");
 
         function showPg (idStr) {
-            document.getElementById("div1").classList.toggle('act');
+            document.getElementById(idStr).classList.toggle('act');
         }
 
         function closePg (idStr) {
