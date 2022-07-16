@@ -28,47 +28,15 @@
             border-radius: 10%;
         }
 
-        #pg1 {
-            visibility: hidden;
-            width: 1000px;
-            height: 600px;
-            border-radius: 10%;
-            border: 2px solid black;
-            display: flex;
-            float: left;
-            transition-timing-function: ease-out;
-            transition-duration: 0.5s;
-            margin-top: 70px;
-            background-color: black;
-            color: white;
-            position: absolute;
-        }
-
-        #pg2 {
-            visibility: hidden;
-            width: 1000px;
-            height: 600px;
-            border-radius: 10%;
-            border: 2px solid black;
-            display: flex;
-            float: left;
-            transition-timing-function: ease-out;
-            transition-duration: 0.5s;
-            margin-top: 70px;
-            background-color: black;
-            color: white;
-            position: absolute;
-        }
-
-        #pg3 {
+        .pg {
             width: 1000px;
             height: 600px;
             border-radius: 10%;
             border: 2px solid black;
             display: none;
             float: left;
-            transition: all 0.3s;
             transition-timing-function: ease-out;
+            transition-duration: 0.5s;
             margin-top: 70px;
             background-color: black;
             color: white;
@@ -86,10 +54,6 @@
             border-radius: 5%;
         }
 
-        .act {
-            display: flex;
-        }
-
         button:hover {
             background-color: black;
             border-color: red;
@@ -98,6 +62,15 @@
         button:active {
             background-color: white;
             border-color: green;
+        }
+
+        #pg button:hover {
+            background-color: gray;
+        }
+
+        .cancelBt {
+            background-color: white;
+            color: black;
         }
     </style>
 
@@ -116,22 +89,22 @@
     </div>
     <div class="container">
 
-    <div id="pg1">
-        <button id="cancel1" onclick="closePg ('pg1')" style="display: flex; float: right;">
+    <div id="pg1" class="pg">
+        <button id="cancel1" class="cancelBt" onclick="closePg ('pg1')" style="display: flex; float: right; top: 0;">
             <h4>X</h4>
         </button>
-        <h1>fjkekfllsefkself<br>efsfe<br>efsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
+        <h1>fjkekfllsefkself<br>efsrgegrergeergfe<br>efseerggrgrergergefsef<br><br><br><br><br>feregererggewwgewegrfsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
     </div>
 
-    <div id="pg2">
-        <button id="cancel2" onclick="closePg ('pg2')" style="display: flex; float: right;">
+    <div id="pg2" class="pg">
+        <button id="cancel2" class="cancelBt" onclick="closePg ('pg2')" style="display: flex; float: right; top: 0;">
             <h4>X</h4>
         </button>
         <h1>fjkekfllsefkself<br>efsfe<br>efsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefseffsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
     </div>
 
-    <div id="pg3">
-        <button id="cancel3" onclick="closePg ('pg3')" style="display: flex; float: right;">
+    <div id="pg3" class="pg">
+        <button id="cancel3" class="cancelBt" onclick="closePg ('pg3')" style="display: flex; float: right; top: 0;">
             <h4>X</h4>
         </button>
         <h1>fjkekfllsefkself<br>efsfe<br>efsefsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsef<br><br><br><br><br>fefsfee<br><br><br><br><br><br>sefesfsefsefsef</h1>
@@ -144,11 +117,11 @@
         let backGround = document.querySelector("body");
 
         function showPg (idStr) {
-            document.getElementById(idStr).classList.toggle('act');
+            document.getElementById(idStr).style.display = 'flex';
         }
 
         function closePg (idStr) {
-            document.getElementById(idStr).classList.toggle('act');
+            document.getElementById(idStr).style.display = 'none';
         }
     </script>
 
